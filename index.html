@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class = "container">
+      <header class="header-footer">
+        <div>Calculadora</div>
+        <nav class = "navbar"> 
+        </nav>
+      </header>
+
+
+      <main>
+        <div id="calculator-border">
+          <input class="area-result" id="area-result">
+          </input>
+
+          <button id="clear-button" class="clear-button" onclick="cleaningUp ()">C</button>
+
+          <div id="numbers-area">
+            <button class="number-button item9" onclick="addNumbers (9)">9</button>
+            <button class="number-button item8" onclick="addNumbers (8)">8</button>
+            <button class="number-button item7" onclick="addNumbers (7)">7</button>
+            <button class="number-button item6" onclick="addNumbers (6)">6</button>
+            <button class="number-button item5" onclick="addNumbers (5)">5</button>
+            <button class="number-button item4" onclick="addNumbers (4)">4</button>
+            <button class="number-button item3" onclick="addNumbers (3)">3</button>
+            <button class="number-button item2" onclick="addNumbers (2)">2</button>
+            <button class="number-button item1" onclick="addNumbers (1)">1</button>
+            <button class="number-button item0" onclick="addNumbers (0)">0</button>
+            <button class="number-button itemponto"  onclick="addNumbers (`.`)">.</button>
+            <button class="number-button result" onclick="result()">=</button>
+            <button class="operator-button divisao" value="/" onclick="operators (`/`)">÷</button>
+            <button class="operator-button multiplicacao" value="*" onclick="operators (`*`)">x</button>
+            <button class="operator-button adicao" value="+" onclick="operators (`+`)">+</button>
+            <button class="operator-button subtracao" value="-" onclick="operators (`-`)">-</button>
+          </div>
+        </div>
+      </main>
+    
+      <footer class = "header-footer"> 
+        <div>Calculadora</div>
+      </footer>
+    </div>
+  </body>
+</html>
