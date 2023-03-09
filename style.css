@@ -1,0 +1,212 @@
+* {padding:0;
+  margin:0;
+  border:0;
+  box-sizing:border-box;}
+  
+  .container {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(85, 83, 81);
+  }
+  
+  .header-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(54, 52, 52);
+    display: flex;
+    color: white;
+    width: 100%;
+    min-height: 70px;
+    align-items: center;
+    justify-content:center;
+  }
+ 
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  main #calculator-border {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgb(41, 39, 39);
+    padding: 1%;
+    min-height: 400px;
+  }
+
+  .area-result {
+    align-self: center;
+    border: 2px solid rgb(60, 60, 61);
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    text-align: end;
+  }
+
+  .clear-button {
+    align-self: flex-end;
+    width: 20%;
+    height: 10%;
+    background-color: rgb(255, 255, 255);
+    
+  }
+
+  .clear-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+   #numbers-area { 
+    align-self: center;
+    background-color: rgb(41, 39, 39);
+    display: grid;
+    grid-template-areas: 
+    "item9 item8 item7 divisao"
+    "item6 item5 item4 multiplicacao"
+    "item3 item2 item1 adicao"
+    "item0 itemponto result subtracao";
+    border-radius: 10px;
+    gap: 1%;
+  } 
+
+  .number-button {
+    background-color: rgb(77, 75, 75);
+    border-radius: 10px;
+    color: white;
+  }
+  .operator-button {
+    background-color:darkgray ;
+    color: black;
+    border-radius: 20px;
+    margin-left: 30px;
+    color: rgb(3, 36, 184);
+  }
+  .result {
+    background-color: aqua;
+    border-radius: 20px;
+    color: black;
+  }
+
+  .number-button:hover,.operator-button:hover,.result:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+
+  .item9 {grid-area: item9;}
+  .item8 {grid-area: item8;}
+  .item7 {grid-area: item7;}
+  .item6 {grid-area: item6;}
+  .item5 {grid-area: item5;}
+  .item4 {grid-area: item4;}
+  .item3 {grid-area: item3;}
+  .item2 {grid-area: item2;}
+  .item1 {grid-area: item1;}
+  .itemponto {grid-area: itemponto;}
+
+
+  .divisao {grid-area: divisao;}
+  .multiplicacao {grid-area: multiplicacao;}
+  .adicao {grid-area: adicao;}
+  .subtracao {grid-area: subtracao;}
+  .result {grid-area: result;}
+
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width:99999px) {
+  #calculator-border {
+    width: 20%;
+    height: 700px;
+    gap: 2%;
+}
+  .area-result {
+  width: 100%;
+  height: 80px;
+  border-color: gray;
+}
+  #numbers-area {
+    width: 100%;
+    height: 500px; 
+}
+  .operator-button {
+    width: 70%;
+}
+  .operator-button,.number-button,.result {
+    font-size: larger;
+ }
+}
+
+
+@media (max-width:1440px) {
+  #calculator-border {
+  width: 30%;
+  height: 500px;
+  }
+  .area-result {
+    width: 90%;
+    height: 75px;
+  }
+  #numbers-area {
+    height: 350px; 
+  }
+  .operator-button {
+    width: 50%;
+  }
+}
+
+@media (max-width:1130px) {
+    #calculator-border {
+      height: 400px;
+    }
+
+  .operator-button {
+    width: 70%;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width:670px) {
+  #calculator-border {
+  width: 50%;
+  background-color: black;
+  gap: 1rem;
+  }
+  .area-result {
+    height: 60px;
+  }
+  #numbers-area {
+    height: 290px; 
+  }
+  .operator-button,.number-button,.result {
+    width: 100%;
+    margin-left: 0;
+
+  }
+}
+
+  @media (max-width:375px) {
+    .header-footer {
+      display: none;
+    }
+
+    #calculator-border { 
+      width: 100%;
+      min-height: 100%;
+    }
+    .area-result {
+      width: 95%;
+    }
+
+  }
